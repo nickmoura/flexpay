@@ -1,19 +1,19 @@
+let slideIndex = 1;
 
-var radio = document.querySelector('.manual-btn')
-var cont = 1
-
-document.getElementById('radio1').checked = true
-
-setInterval(() => {
-	proximaImg ()
-}, 5000)
-
-function proximaImg(){
-	cont++
-
-	if(cont > 3){
-		cont = 1
-	}
-
-	document.getElementById('radio'+cont).checked = true
+function showSlides(index) {
+  const slides = document.querySelector('.carousel-wrapper');
+  if (index > 3) {
+    slideIndex = 1;
+  } else if (index < 1) {
+    slideIndex = 3;
+  }
+  const translateValue = -100 * (slideIndex - 1);
+  slides.style.transform = `translateX(${translateValue}%)`;
 }
+
+function currentSlide(index) {
+  slideIndex = index;
+  showSlides(slideIndex);
+}
+
+showSlides(slideIndex);

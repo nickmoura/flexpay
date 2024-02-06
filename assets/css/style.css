@@ -1,24 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+	font-family: 'Albert Sans', sans-serif;
+	margin: 0;
+	padding: 0;
 	background-color: #1D366F;
-	color: #000000; /* Cor do texto em preto para o contraste */
+	color: #000000;
+	/* Cor do texto em preto para o contraste */
 }
 
 header {
-    background-color: #21232B;
-    color: white;
+	background-color: #FFFFFF;
+	color: black;
 	height: 15vh;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	/*justify-content: space-around;*/
+	/*margin-bottom: 5px;*/
 }
 
 .container {
 	margin-left: 56px;
-	margin-right: 56px;
+	/*margin-right: 56px;*/
 	display: flex;
 }
 
@@ -30,13 +34,14 @@ header {
 
 .logo-flexpay img {
 	width: 13vw;
+
 }
 
 div .navbar {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 	text-align: center;
-    margin-right: -12px;
+	margin-right: -12px;
 }
 
 .navbar-beg {
@@ -56,16 +61,16 @@ div .navbar {
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 	text-align: center;
 	justify-content: center;
 	display: flex;
 }
 
 li {
-    display: inline;
+	display: inline;
 	text-align: center;
 	justify-content: center;
 	padding: 8px 4px;
@@ -83,118 +88,144 @@ li {
 }
 
 a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
+	text-decoration: none;
+	color: #0074d9;
+	font-weight: bold;
+	font-size: 20px;
+	transition: color 0.3s ease;
 	text-align: center;
 	justify-content: center;
 	display: flex;
+	/*-webkit-text-stroke-width: 0.7px; /* largura da borda */
+	/*-webkit-text-stroke-color: #000; /* cor da borda */
 }
 
 a:hover {
-    color: #08C076; /* Cor de destaque ao passar o mouse sobre os links */
+	color: #08C076;
+	/* Cor de destaque ao passar o mouse sobre os links */
 }
 
-section.slider {
-	margin: 0 auto;
+.carousel-container {
+	position: relative;
 	width: 100%;
-	height: auto;
-	padding: 0 !important;
+	margin: auto;
 	overflow: hidden;
 }
 
-.slider-content {
-	width: 400%;
-	height: auto;
+.carousel-wrapper {
 	display: flex;
-}
-
-.slider-content input, .img-mobile {
-	display: none;
-}
-
-.slide-box {
-	width: 25%;
-	height: auto;
-	position: relative;
-	text-align: center;
-	transition: 3s;
-	border-radius: 0% 0% 50% 50%;
-}
-
-.slide-box img {
 	width: 100%;
-	border-radius: 0% 0% 50% 50%;
+	transition: transform 0.5s ease-in-out;
 }
 
-.nav-manual, .nav-auto {
+.slide {
+	flex: 0 0 100%;
+	height: 450px;
+	/* ajuste conforme necessário */
+	background-size: contain;
+	border-radius: 0% 0% 20% 20%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+	position: relative; /* Adiciona position relative ao slide */
+}
+
+.slide-content {
 	position: absolute;
-	width: 100%;
-	margin-top: 35%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: #FFFFFF;
+	width: 100%; /* Ajusta a largura para ocupar 100% do slide */
+	padding: 0 20px; /* Adiciona padding para espaçamento interno */
+	text-shadow: 2px 2px 4px #333; /* Contorno cinza escuro */
+  }
+  
+  .slide-content h2 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+  }
+  
+  .slide-content p {
+	font-size: 1em;
+  }
+  
+
+#slide1 {
+	background-image: url('/flexpay/assets/img/foto1-1280.jpg');
+}
+
+#slide2 {
+	background-image: url('/flexpay/assets/img/foto2-1280.jpg');
+}
+
+#slide3 {
+	background-image: url('/flexpay/assets/img/foto3-1280.jpg');
+}
+
+.carousel-dots {
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
 	display: flex;
-	justify-content: center;
 }
 
-.nav-manual .manual-btn, .nav-auto div {
-	border: 1px solid #ff0054;
-	padding: 10px;
+.dot {
+	height: 10px;
+	width: 10px;
+	margin: 0 5px;
+	background-color: #bbb;
 	border-radius: 50%;
+	display: inline-block;
 	cursor: pointer;
-	transition: 0.2s;
 }
 
-.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
-	margin-right: 10px;
+.dot:hover {
+	background-color: #717171;
 }
 
-.nav-manual .manual-btn:hover {
-	background-color: #ff0054;
-}
+/* Tela de login */
 
-#radio1:checked ~ .nav-auto .auto-btn1 {
-	background-color: #ff0054;
-}
-
-#radio2:checked ~ .nav-auto .auto-btn2 {
-	background-color: #ff0054;
-}
-
-#radio3:checked ~ .nav-auto .auto-btn3 {
-	background-color: #ff0054;
-}
-
-#radio1:checked ~ .primeiro {
-	margin-left: 0%;
-}
-
-#radio2:checked ~ .primeiro {
-	margin-left: -25%;
-}
-
-#radio3:checked ~ .primeiro {
-	margin-left: -50%;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    bottom: 0;
-    width: 100%;
-}
-
-@media screen and(max-width: 900px) {
-	.img-desktop {
-		display: none;
-	}
-
-	.img-mobile {
-		display: block;
-	}
-	.nav-auto, .nav-manual {
-		margin-top: 60%;
-	}
-}
+  .login-container {
+	padding: 20px;
+	border-radius: 8px;
+	color: #fff;
+  }
+  
+  .login-form {
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+  }
+  
+  .titulo-login {
+	margin-bottom: 20px;
+  }
+  
+  .legenda-login {
+	display: block;
+	margin-bottom: 8px;
+  }
+  
+  .campo-login {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 16px;
+	box-sizing: border-box;
+  }
+  
+  .submit {
+	background-color: #4caf50;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  .submit:hover {
+	background-color: #45a049;
+  }
