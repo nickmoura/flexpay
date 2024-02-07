@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,400&display=swap');
 
 body {
-	font-family: 'Albert Sans', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	margin: 0;
-	padding: 0;
-	background-color: #1D366F;
-	color: #000000;
+	background-color: #2c3e50;
+	color: #f0ffffde;
 	/* Cor do texto em preto para o contraste */
 }
 
+body * {
+	box-sizing: border-box;
+}
+
+
 header {
-	background-color: #FFFFFF;
+	background-color: #f0ffffde;
 	color: black;
 	height: 15vh;
 	display: flex;
@@ -35,6 +39,10 @@ header {
 .logo-flexpay img {
 	width: 13vw;
 
+}
+
+main {
+	margin-bottom: 20px;
 }
 
 div .navbar {
@@ -87,9 +95,9 @@ li {
 	margin-right: 32px;
 }
 
-a {
+header a {
 	text-decoration: none;
-	color: #0074d9;
+	color: #2c3e50;
 	font-weight: bold;
 	font-size: 20px;
 	transition: color 0.3s ease;
@@ -100,7 +108,7 @@ a {
 	/*-webkit-text-stroke-color: #000; /* cor da borda */
 }
 
-a:hover {
+header a:hover {
 	color: #08C076;
 	/* Cor de destaque ao passar o mouse sobre os links */
 }
@@ -128,7 +136,8 @@ a:hover {
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin-bottom: 20px;
-	position: relative; /* Adiciona position relative ao slide */
+	position: relative;
+	/* Adiciona position relative ao slide */
 }
 
 .slide-content {
@@ -137,21 +146,24 @@ a:hover {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	color: #FFFFFF;
-	width: 100%; /* Ajusta a largura para ocupar 100% do slide */
-	padding: 0 20px; /* Adiciona padding para espaçamento interno */
-	text-shadow: 2px 2px 4px #333; /* Contorno cinza escuro */
-  }
-  
-  .slide-content h2 {
+	color: #f0ffffde;
+	width: 100%;
+	/* Ajusta a largura para ocupar 100% do slide */
+	padding: 0 20px;
+	/* Adiciona padding para espaçamento interno */
+	text-shadow: 2px 2px 4px #333;
+	/* Contorno cinza escuro */
+}
+
+.slide-content h2 {
 	font-size: 1.5em;
 	margin-bottom: 10px;
-  }
-  
-  .slide-content p {
+}
+
+.slide-content p {
 	font-size: 1em;
-  }
-  
+}
+
 
 #slide1 {
 	background-image: url('/flexpay/assets/img/foto1-1280.jpg');
@@ -189,43 +201,142 @@ a:hover {
 
 /* Tela de login */
 
-  .login-container {
-	padding: 20px;
-	border-radius: 8px;
-	color: #fff;
-  }
-  
-  .login-form {
-	max-width: 300px;
-	margin: auto;
-	text-align: center;
-  }
-  
-  .titulo-login {
+.area-login {
+	height: 84vh;
+	display: flex;
+	justify-content: center;
+	color: #f0ffffde;
+	align-items: center;
+}
+
+.titulo-login {
+	color: #87ceeb;
+	width: 100%;
+	height: auto;
+	font-weight: 800;
+	margin: 0;
 	margin-bottom: 20px;
-  }
-  
-  .legenda-login {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+form {
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+label {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	margin-bottom: 8px;
+	font-weight: 600;
+	color: #87ceeb;
 	display: block;
 	margin-bottom: 8px;
-  }
-  
-  .campo-login {
+}
+
+label > span {
+	margin-bottom: 10px;
+}
+
+.left-login {
+	width: 50vw;
+	height: 84vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.left-login {
+	font-size: 2rem;
+	margin: 0;
+}
+
+.right-login {
+	width: 50vw;
+	height: 84vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-login {
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 30px 35px;
+	background: #324457;
+	border-radius: 20px;
+	box-shadow: 0px 10px 40px #014f30;
+}
+ 
+.campo-login {
 	width: 100%;
-	padding: 8px;
-	margin-bottom: 16px;
-	box-sizing: border-box;
-  }
-  
-  .submit {
-	background-color: #4caf50;
-	color: #fff;
-	padding: 10px;
+	margin-top: 8px;
 	border: none;
-	border-radius: 4px;
+	border-radius: 10px;
+	padding: 15px;
+	background: #526980;
+	color: #f0ffffde;
+	font-size: 1.1rem;
+	box-shadow: 0px 10px 40px #00000056;
+	outline: none;
+	box-sizing: border-box;
+}
+
+#username.campo-login {
+	margin-top: 8px;
+}
+
+label > input::placeholder {
+	color: #b8c6c694;
+}
+
+.submit {
+	width: 100%;
+	padding: 16px 0px;
+	margin: 25px 0px 25px 0px;
+	border: none;
+	border-radius: 8px;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 3px;
+	color: #2b134b;
+	background: #87ceeb;
 	cursor: pointer;
-  }
-  
-  .submit:hover {
-	background-color: #45a049;
-  }
+	box-shadow: 0px 10px 40px -12px #86D1EB;
+	font-size: 1.1rem;
+}
+
+.submit:hover {
+	background: #6DA6BD;
+	transition: all .3s ease-in-out;
+}
+
+footer {
+	border-top: 0.2px solid white;
+	/*width: 100vw;*/
+	height: 8vh;
+	padding: 32px;
+	text-align: center;
+}
+
+footer p {
+	display: block;
+	color: #c0c0c0;
+	margin: 0 auto;
+}
+
+footer a {
+	color: #00ff88;
+	text-decoration: none;
+}

@@ -34,21 +34,34 @@
 		</div>
 	</header>
 
-	<div class="login-container">
-		<div class="login-form">
-			<h2 class="titulo-login">Login FlexPay</h2>
-			<form id="flexpay-login-form">
-				<label for="username" class="legenda-login">Usuário:</label>
-				<input type="text" class="campo-login" id="username" name="username" required>
+	<main class="area-login">
+		<section class="left-login">
+			<h1>Área do cliente</h1>
+			<img src="../assets/img/online-shopping-animate.svg" alt="">
+		</section>
+			<section class="right-login">
+				<div class="card-login">
+					<h1 class="titulo-login">Login</h1>
+					<form id="flexpay-login-form">
+						<label for="username" class="legenda-login">
+							<span>CNPJ</span>
+							<input type="text" class="campo-login" inputmode="numeric" maxlength="18" id="cnpj" name="cnpj" required placeholder="Digite aqui seu CNPJ">
+						</label>
+						<label for="password" class="legenda-login">
+							<span>Senha</span>
+							<input type="password" class="campo-login" id="password" name="password" required placeholder="Digite aqui sua senha">
+						</label>
 
-				<label for="password" class="legenda-login">Senha:</label>
-				<input type="password" class="campo-login" id="password" name="password" required>
-
-				<button type="submit" class="submit">Entrar</button>
-			</form>
-		</div>
-	</div>
-
+						<button type="submit" class="submit">Entrar</button>
+					</form>
+				</div>
+			</section>
+	</main>
+	<footer>
+		<p>
+			© 2023 - Nickolas Moura - Todos os direitos reservados - Criado para <a href="https://github.com/nickmoura">meu portfólio de GitHub</a>
+		</p>
+	</footer>
 	<script src="/flexpay/assets/scripts/script-login.js"></script>
 </body>
 
