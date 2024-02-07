@@ -4,8 +4,6 @@ body {
 	font-family: 'Noto Sans', sans-serif;
 	margin: 0;
 	background-color: #2c3e50;
-	color: #f0ffffde;
-	/* Cor do texto em preto para o contraste */
 }
 
 body * {
@@ -14,14 +12,16 @@ body * {
 
 
 header {
-	background-color: #f0ffffde;
-	color: black;
-	height: 15vh;
+	height: 8vh;
+	border-bottom: 0.2px solid white;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	/*justify-content: space-around;*/
-	/*margin-bottom: 5px;*/
+	justify-content: space-around;
+	padding: 24px;
+	text-align: center;
+	margin: auto;
+	padding: 32px;
 }
 
 .container {
@@ -31,14 +31,15 @@ header {
 }
 
 .logo-flexpay {
+	width: 30vw;
+	align-items: center;
 	margin-top: 0;
 	margin-bottom: 0px;
-	padding: 8px 12px 8px 12px;
 }
 
 .logo-flexpay img {
-	width: 13vw;
-
+	width: 20vw;
+	margin: auto;
 }
 
 main {
@@ -79,7 +80,7 @@ ul {
 
 li {
 	display: inline;
-	text-align: center;
+	/*text-align: center;*/
 	justify-content: center;
 	padding: 8px 4px;
 }
@@ -89,6 +90,7 @@ li {
 	justify-content: center;
 	display: flex;
 	padding: 8px 4px 8px 4px;
+	font-size: 19px;
 }
 
 .ultimo {
@@ -97,13 +99,14 @@ li {
 
 header a {
 	text-decoration: none;
-	color: #2c3e50;
+	color: #87ceeb;
 	font-weight: bold;
 	font-size: 20px;
 	transition: color 0.3s ease;
 	text-align: center;
 	justify-content: center;
 	display: flex;
+	margin: auto;
 	/*-webkit-text-stroke-width: 0.7px; /* largura da borda */
 	/*-webkit-text-stroke-color: #000; /* cor da borda */
 }
@@ -202,11 +205,19 @@ header a:hover {
 /* Tela de login */
 
 .area-login {
-	height: 84vh;
+	height: 84%;
 	display: flex;
 	justify-content: center;
-	color: #f0ffffde;
+	color: #87ceeb;
 	align-items: center;
+	padding: 20px;
+	margin: 20px 0px 20px 0px;
+}
+
+.area-login-image {
+	width: 35vw;
+	height: auto;
+	margin: 8px;
 }
 
 .titulo-login {
@@ -239,7 +250,7 @@ label {
 	margin-bottom: 8px;
 }
 
-label > span {
+label>span {
 	margin-bottom: 10px;
 }
 
@@ -247,12 +258,15 @@ label > span {
 	width: 50vw;
 	height: 84vh;
 	display: flex;
-	justify-content: center;
+	/*justify-content: center;*/
 	align-items: center;
+	text-align: center;
 	flex-direction: column;
+	font-size: 32px;
+	margin: auto;
 }
 
-.left-login {
+.left-login h1 {
 	font-size: 2rem;
 	margin: 0;
 }
@@ -277,7 +291,7 @@ label > span {
 	border-radius: 20px;
 	box-shadow: 0px 10px 40px #014f30;
 }
- 
+
 .campo-login {
 	width: 100%;
 	margin-top: 8px;
@@ -296,7 +310,7 @@ label > span {
 	margin-top: 8px;
 }
 
-label > input::placeholder {
+label>input::placeholder {
 	color: #b8c6c694;
 }
 
@@ -337,6 +351,295 @@ footer p {
 }
 
 footer a {
-	color: #00ff88;
+	color: #87ceeb;
 	text-decoration: none;
+}
+
+/*Aqui começam as media queries*/
+
+@media only screen and (min-width: 601px) and (max-width: 1280px) {
+	header {
+		height: 8%;
+		width: 100%;
+	}
+
+	.logo-flexpay {
+		width: 15%;
+	}
+
+	.logo-flexpay img {
+		width: 100%;
+	}
+
+	nav {
+		text-align: center;
+		/*font-size: 4vh;*/
+	}
+
+	nav a {
+		margin: auto;
+	}
+
+	.area-login {
+		height: 84%;
+		margin: 20px 0 20px 0;
+	}
+
+	.left-login {
+		height: 100%;
+	}
+
+	.area-login-image {
+		width: 80%;
+		height: auto;
+		margin: 8px;
+	}
+
+	.right-login {
+		width: 50%;
+		height: auto;
+		align-items: center;
+	}
+
+	.card-login {
+		width: 90%;
+		height: auto;
+		text-align: center;
+	}
+
+	footer {
+		height: 8%;
+	}
+
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+
+	header {
+		height: 8%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: space-around;
+		gap: 10px;
+		margin-top: 0;
+		padding: 8px;
+	}
+
+	.logo-flexpay {
+		width: 50%;
+	}
+
+	.logo-flexpay img {
+		width: 100%;
+	}
+
+	nav {
+		width: 100%;
+		text-align: center;	}
+
+	nav a {
+		margin: auto;
+		font-size: 14px;
+	}
+
+	.area-login {
+		flex-direction: column;
+		height: 84%;
+		margin: 20px 0 20px 0;
+		padding: 0;
+	}
+
+	.left-login>h1 {
+		display: none;
+	}
+
+	.left-login {
+		width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+	}
+
+	.area-login-image {
+		width: 80%;
+		margin: 8px;
+	}
+
+	.right-login {
+		width: 100%;
+		height: auto;
+		align-items: center;
+	}
+
+	.area-login-image {
+		width: 50vw;
+		margin: 8px;
+	}
+
+	.card-login {
+		width: 90%;
+		text-align: center;
+		gap: 12px;
+		font-size: 14px;
+	}
+
+	.card-login label input::placeholder {
+		font-size: 14px;
+	}
+
+	footer {
+		height: 8%;
+		font-size: 14px;
+	}
+
+}
+
+@media only screen and (max-width: 300px) {
+
+	header {
+		height: 8%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		gap: 10px;
+		margin-top: 0;
+		padding: 8px;
+	}
+
+	.logo-maxima {
+		width: 50%;
+	}
+
+	.logo-maxima img {
+		width: 100%;
+	}
+
+	nav {
+		width: 100%;
+		text-align: center;
+	}
+
+	nav a {
+		margin: auto;
+		font-size: 12px;
+	}
+
+	.main-login-signup {
+		flex-direction: column;
+		height: 84%;
+		margin: 20px 0 20px 0;
+		padding: 0;
+	}
+
+	.left-login-signup>h1 {
+		display: none;
+	}
+
+	.left-login-signup {
+		width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+	}
+
+	.left-login-signup-image {
+		width: 80%;
+		margin: 8px;
+	}
+
+	.right-login-signup {
+		width: 100%;
+		height: auto;
+		align-items: center;
+		font-size: 12px;
+	}
+
+	.left-login-signup-image {
+		width: 50vw;
+		margin: 8px;
+	}
+
+	.card-login {
+		width: 90%;
+		text-align: center;
+		font-size: 10px;
+	}
+
+	.card-login label input::placeholder {
+		font-size: 12px;
+	}
+
+	.card-signup {
+		width: 90%;
+		text-align: center;
+	}
+
+	.card-signup label input::placeholder {
+		font-size: 12px;
+	}
+	
+
+	footer {
+		height: 8%;
+		font-size: 12px;
+	}
+
+	.descricao-inicio {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.area-esqueci-senha {
+		width: 100%;
+	}
+
+	.preciso-de-ajuda {
+		text-align: justify;
+	}
+
+	.cpf-forgot::placeholder {
+		font-size: 12px;
+	}
+
+	.container-foto {
+		margin: auto;
+	}
+	
+	.btn-login-signup {
+		margin: auto;
+		margin-top: 10px;
+		font-size: 14px;
+	}
+
+	.forgot {
+		margin: 0;
+	}
+
+	.btn-forgot-pass {
+		width: 100%;
+		font-size: 14px;
+	}
+
+	#message {
+		font-size: 12px;
+	}
+
+	#message::placeholder {
+		font-size: 12px;
+	}
+
+	#sendmessage {
+		font-size: 12px;
+	}
+
+	.mapa {
+		width: 200px;
+		height: 200px;
+	}
+
+	.container-depoimentos {
+		display: flex;
+		flex-direction: column;
+	}
 }
