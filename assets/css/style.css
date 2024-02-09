@@ -31,14 +31,14 @@ header {
 }
 
 .logo-flexpay {
-	width: 30vw;
+	width: 12vw;
 	align-items: center;
 	margin-top: 0;
 	margin-bottom: 0px;
 }
 
 .logo-flexpay img {
-	width: 20vw;
+	width: 100%;
 	margin: auto;
 }
 
