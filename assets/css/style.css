@@ -3,7 +3,8 @@
 body {
 	font-family: 'Noto Sans', sans-serif;
 	margin: 0;
-	background-color: #2c3e50;
+	background-color: #F0F0F0;
+	min-height: 100vh;
 }
 
 body * {
@@ -12,14 +13,12 @@ body * {
 
 
 header {
-	/*width: 100vw;*/
 	height: 8vh;
-	border-bottom: 0.2px solid white;
+	border-bottom: 0.2px solid #0074D9;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-around;
-	padding: 24px;
+	justify-content: space-between;
 	text-align: center;
 	margin: auto;
 	padding: 32px;
@@ -28,6 +27,7 @@ header {
 
 .logo-flexpay {
 	width: 13vw;
+	justify-content: start;
 	align-items: center;
 	margin-top: 0;
 	margin-bottom: 0px;
@@ -40,20 +40,24 @@ header {
 
 main {
 	margin-bottom: 20px;
+	height: 78vh;
+}
+
+.menu-nav {
+	display: flex;
+	justify-content: space-between;
+	width: 60%;
 }
 
 .links-header {
 	text-decoration: none;
-	color: #87ceeb;
+	color: #0074D9;
 	font-weight: bold;
 	font-size: 20px;
 	transition: color 0.3s ease;
-	text-align: center;
-	justify-content: center;
+	/*text-align: center;*/
+	/* justify-content: center; */
 	display: flex;
-	margin: auto;
-	/*-webkit-text-stroke-width: 0.7px; /* largura da borda */
-	/*-webkit-text-stroke-color: #000; /* cor da borda */
 }
 
 .links-header:hover {
@@ -79,7 +83,7 @@ main {
 	height: 450px;
 	/* ajuste conforme necessário */
 	background-size: contain;
-	border-radius: 0% 0% 20% 20%;
+	border-radius: 0% 0% 5% 5%;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -93,36 +97,50 @@ main {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: row;
 	text-align: center;
-	color: #f0ffffde;
+	color: #f0f0f0;
 	width: 100%;
-	/* Ajusta a largura para ocupar 100% do slide */
 	padding: 0 20px;
-	/* Adiciona padding para espaçamento interno */
-	text-shadow: 2px 2px 4px #333;
-	/* Contorno cinza escuro */
+	text-shadow: 2px 2px 4px #0074D9;
+	justify-content: space-between;
+}
+  
+.text-left {
+	flex: 1;	
+	text-align: left;
 }
 
-.slide-content h2 {
-	font-size: 1.5em;
-	margin-bottom: 10px;
+.text-left h2 {
+	text-align: center;
+	font-size: 3rem;
+	margin: 0;
+}
+  
+.text-right {
+	flex: 1;
+	text-align: right;
 }
 
-.slide-content p {
-	font-size: 1em;
+.text-right p {
+	text-align: center;
+	font-size: 2rem;
+	margin: auto;
+	height: 100%;
 }
 
 
 #slide1 {
-	background-image: url('/flexpay/assets/img/foto1-1280.jpg');
+	background-image: url('../img/foto1-1280.jpg');
 }
 
 #slide2 {
-	background-image: url('/flexpay/assets/img/foto2-1280.jpg');
+	background-image: url('../img/foto2-1280.jpg');
 }
 
 #slide3 {
-	background-image: url('/flexpay/assets/img/foto3-1280.jpg');
+	background-image: url('../img/foto3-1280.jpg');
 }
 
 .carousel-dots {
@@ -153,7 +171,7 @@ main {
 	height: 84%;
 	display: flex;
 	justify-content: center;
-	color: #87ceeb;
+	color: #0074D9;
 	align-items: center;
 	padding: 20px;
 	margin: 20px 0px 20px 0px;
@@ -166,7 +184,7 @@ main {
 }
 
 .titulo-login {
-	color: #87ceeb;
+	color: #0074D9;
 	width: 100%;
 	height: auto;
 	font-weight: 800;
@@ -190,13 +208,17 @@ label {
 	justify-content: center;
 	margin-bottom: 8px;
 	font-weight: 600;
-	color: #87ceeb;
+	color: #0074D9;
 	display: block;
 	margin-bottom: 8px;
 }
 
 label>span {
 	margin-bottom: 10px;
+}
+
+.area-login {
+	height: 78vh;
 }
 
 .left-login {
@@ -209,6 +231,10 @@ label>span {
 	flex-direction: column;
 	font-size: 32px;
 	margin: auto;
+}
+
+.area-login-image {
+	height: 70vh;
 }
 
 .left-login h1 {
@@ -227,14 +253,31 @@ label>span {
 
 .card-login {
 	width: 60%;
+	height: 60vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	padding: 30px 35px;
-	background: #324457;
+	background: #cecece;
 	border-radius: 20px;
-	box-shadow: 0px 10px 40px #014f30;
+	box-shadow: 0px 10px 40px #656262;
+}
+
+.fb9 {
+	background-color: #db6600;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	padding-bottom:3px;	
+	color: #ffffff;
+	border:1px solid #db6600;
+	background-image: url(images/button_bg.jpg);
+}
+.fb9:hover {
+	background-color: #000000;	
+	border:1px solid #000000;
+	background-image: url(images/button_bg_over.jpg);
 }
 
 .campo-login {
@@ -243,8 +286,8 @@ label>span {
 	border: none;
 	border-radius: 10px;
 	padding: 15px;
-	background: #526980;
-	color: #f0ffffde;
+	background: #8e9dac;
+	color: #0074D9;
 	font-size: 1.1rem;
 	box-shadow: 0px 10px 40px #00000056;
 	outline: none;
@@ -256,7 +299,7 @@ label>span {
 }
 
 label>input::placeholder {
-	color: #b8c6c694;
+	color: #0074D9;
 }
 
 .submit {
@@ -269,69 +312,101 @@ label>input::placeholder {
 	text-transform: uppercase;
 	font-weight: 800;
 	letter-spacing: 3px;
-	color: #2b134b;
-	background: #87ceeb;
+	color: #f0f0f0;
+	background: #0074D9;
 	cursor: pointer;
-	box-shadow: 0px 10px 40px -12px #86D1EB;
+	box-shadow: 0px 10px 40px -12px #2e88d7;
 	font-size: 1.1rem;
 }
-
 .submit:hover {
 	background: #6DA6BD;
+	color: #555555;
 	transition: all .3s ease-in-out;
 }
 
 footer {
-	border-top: 0.2px solid white;
-	/*width: 100vw;*/
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #F0F0F0;
+	border-top: 0.2px solid #0074D9;
 	height: 8vh;
 	padding: 32px;
 	text-align: center;
+  
 }
 
 footer p {
 	display: block;
-	color: #c0c0c0;
+	color: #555555;
 	margin: 0 auto;
 }
 
 footer a {
-	color: #87ceeb;
+	color: #0074D9;
 	text-decoration: none;
 }
 
-/*Aqui começam as media queries*/
+/* Aqui começam as media queries */
 
-@media only screen and (min-width: 601px) and (max-width: 1280px) {
+ @media only screen and (min-width: 601px) and (max-width: 1280px) {
 	header {
-		height: 8%;
+		height: 8vh;
 		width: 100%;
 	}
 
 	.logo-flexpay {
-		width: 15%;
+		width: 20%;
 	}
 
 	.logo-flexpay img {
 		width: 100%;
 	}
 
-	nav {
+	.menu-nav {
+		width: 85%;
 		text-align: center;
-		/*font-size: 4vh;*/
+		gap: 3px;
 	}
 
-	nav a {
+	.menu-nav a {
 		margin: auto;
+		font-size: 0.8rem;
+	}
+
+	.slide {
+		height: 92vh;
+		border-radius: 0% 0% 3% 3%;
+	}
+
+	.text-left h2{
+		font-size: 1.5rem;
+	}
+
+	.text-right p {
+		font-size: 1.3rem;
 	}
 
 	.area-login {
-		height: 84%;
-		margin: 20px 0 20px 0;
+		height: 78vh;
+		margin: 0 0 10px 0;
 	}
 
 	.left-login {
-		height: 100%;
+		width: 50%;
+		height: auto;
+		align-items: center;
+	}
+
+	.login-page-title {
+		font-size: 5rem;
+		margin: auto;
+	}
+
+	.area-login-image{
+		font-size: 1.5rem;
+		margin: auto;
+		margin-top: 0;
 	}
 
 	.area-login-image {
@@ -352,19 +427,24 @@ footer a {
 		text-align: center;
 	}
 
-	footer {
-		height: 8%;
+	label>input::placeholder {
+		color: #0074D9;
+		font-size: 0.9rem;
 	}
 
-}
+	footer {
+		height: 8vh;
+	}
+
+ }
 
 @media only screen and (min-width: 301px) and (max-width: 600px) {
 
 	header {
-		height: 8%;
+		height: 8vh;
 		width: 100%;
 		display: flex;
-		flex-direction: column;
+		/*flex-direction: column;*/
 		text-align: center;
 		justify-content: space-around;
 		gap: 10px;
@@ -373,20 +453,54 @@ footer a {
 	}
 
 	.logo-flexpay {
-		width: 50%;
+		width: 25%;
 	}
 
 	.logo-flexpay img {
 		width: 100%;
 	}
 
-	nav {
-		width: 100%;
-		text-align: center;	}
+	.menu-nav {
+		width: 85%;
+		text-align: center;
+		gap: 3px;
+	}
 
-	nav a {
+	.menu-nav a {
 		margin: auto;
-		font-size: 14px;
+		font-size: 0.68rem;
+	}
+
+	main {
+		height: 80vh;
+		margin-bottom: 10px;
+	}
+
+	.slide {
+		height: 77vh;
+		border-radius: 0% 0% 3% 3%;
+	}
+
+	.slide-content {
+		display: flex;
+		flex-direction: column;
+		gap: 350px;
+	}
+
+	.text-left {
+		align-self: center;
+	}
+
+	.text-left h2{
+		font-size: 1.5rem;
+	}
+
+	.text-right {
+		align-self: center;
+	}
+
+	.text-right p {
+		font-size: 1.3rem;
 	}
 
 	.area-login {
@@ -434,7 +548,7 @@ footer a {
 	}
 
 	footer {
-		height: 8%;
+		height: 8vh;
 		font-size: 14px;
 	}
 
@@ -533,7 +647,7 @@ footer a {
 	.descricao-inicio {
 		display: flex;
 		flex-direction: column;
-	}
+	} */
 
 	.area-esqueci-senha {
 		width: 100%;
@@ -587,4 +701,4 @@ footer a {
 		display: flex;
 		flex-direction: column;
 	}
-}
+} 
